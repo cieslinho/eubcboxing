@@ -3,14 +3,21 @@ const mobileNav = document.querySelector('.nav__mobile-list')
 const allNavItems = document.querySelectorAll('.nav__mobile-link')
 
 const handleNav = () => {
+	mobileNav.classList.toggle('show-menu')
+	if (mobileNav.classList.contains('show-menu')) {
+		navBtn.classList.add('btn-active')
+	} else {
+		navBtn.classList.remove('btn-active')
+	}
+	// navBtn.classList.toggle('btn-active')
 	allNavItems.forEach(item => {
-		allNavItems.forEach(navItem => {
-			navItem.addEventListener('click', () => {
+		item.addEventListener('click', () => {
+			if (mobileNav.classList.contains('show-menu')) {
 				mobileNav.classList.remove('show-menu')
-			})
+				navBtn.classList.remove('btn-active')
+			}
 		})
 	})
-	mobileNav.classList.toggle('show-menu')
 }
 
 navBtn.addEventListener('click', handleNav)
