@@ -1,0 +1,160 @@
+@import '_components';
+
+//basic reset
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+*a {
+	text-decoration: none;
+}
+*a,
+*button {
+	outline: none;
+}
+
+*button {
+	cursor: pointer;
+}
+:root {
+	--navy: #041562;
+	--blue: #11468f;
+	--red: #da1212;
+	--white: #eeeeee;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: 'Lexend', sans-serif;
+	background-color: var(--blue);
+}
+
+//nav
+.nav {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: var(--navy);
+	&__mobile {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&-img {
+			padding: 0.5em;
+			height: 70px;
+			width: 70px;
+		}
+
+		&-list {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			top: 0;
+			right: 0;
+			width: 75vw;
+			height: 100vh;
+			transform: translateX(400px);
+			transition: transform 0.3s ease-in;
+
+			background-color: var(--navy);
+			list-style: none;
+		}
+		&-item {
+			margin: 0.5em 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+			border-top: 1px solid var(--red);
+			border-bottom: 1px solid var(--red);
+		}
+		&-link {
+			width: 100%;
+			padding: 1em;
+			text-transform: uppercase;
+			color: var(--white);
+		}
+		&-btn {
+			background: transparent;
+			border: 2px solid var(--red);
+			border-right: 1px solid var(--red);
+			border-top: none;
+			border-bottom: none;
+			border-left: 1px solid var(--red);
+			padding: 0.3em;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&-svg {
+			color: var(--red);
+		}
+		.show-menu {
+			transform: translateX(0);
+		}
+	}
+	&__btn {
+		padding: 0.5em;
+		background: transparent;
+		border: none;
+		outline: none;
+		&:hover &-bars,
+		&:hover &-bars::after,
+		&:hover &-bars::before {
+			width: 100%;
+		}
+
+		&-box {
+			position: relative;
+			width: 40px;
+			height: 30px;
+		}
+		&-bars {
+			position: absolute;
+			height: 2px;
+			background-color: var(--white);
+			transition: width 0.3s;
+			&::before,
+			&::after {
+				position: absolute;
+				content: '';
+				background-color: var(--white);
+				height: 2px;
+				right: 0;
+				transition: width 0.3s;
+			}
+		}
+		&-bars {
+			top: 0;
+			right: 0;
+			width: 75%;
+			&::before {
+				width: 60%;
+				top: 13px;
+			}
+			&::after {
+				width: 100%;
+				top: 25px;
+			}
+		}
+	}
+	&__dropdown-list {
+		position: absolute;
+		display: none;
+		flex-direction: column;
+		top: 0;
+		height: 100vh;
+		width: 100vw;
+	}
+}
