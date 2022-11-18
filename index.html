@@ -8,7 +8,7 @@
     <title>EUBC - Europen Boxing Confederation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./dist/css/main.min.css">
 </head>
 
@@ -16,18 +16,42 @@
     <nav class="nav">
     <div class="container">
         <div class="nav__desktop">
-            <div class="nav__desktop-navbar">
+            <a href="index.html" class="nav__desktop-logo">
+                <img src="./dist/img/logogradient-desktop.png" alt="eubcboxing logo, european boxing confederation"
+                    class="nav__desktop-img">
+            </a>
+            <ul class="nav__desktop-list">
+                <li class="nav__desktop-item">
+                    <a href="#about" class="nav__desktop-link">about</a>
+                </li>
 
-            </div>
+                <li class="nav__desktop-item">
+                    <a href="#" class="nav__desktop-link">ranking</a>
+                </li>
+                <li class="nav__desktop-item">
+                    <a href="calendar.html" class="nav__desktop-link">calendar</a>
+                </li>
+                <li class="nav__desktop-item">
+                    <a href="video.html" class="nav__desktop-link">video</a>
+                </li>
+                <li class="nav__desktop-item">
+                    <a href="documents.html" class="nav__desktop-link">documents</a>
+                </li>
+                <li class="nav__desktop-item">
+                    <a href="#contact" class="nav__desktop-link">contact</a>
+                </li>
+
+            </ul>
         </div>
         <div class="nav__mobile">
             <a href="index.html" class="nav__mobile-logo">
-                <img src="./dist/img/logogradient-desktop.png" alt="" class="nav__mobile-img">
+                <img src="./dist/img/logogradient-desktop.png" alt="eubcboxing logo, european boxing confederation"
+                    class="nav__mobile-img">
             </a>
             <ul class="nav__mobile-list">
                 <li class="nav__mobile-item">
                     <a href="#about" class="nav__mobile-link">about</a>
-                    <button class="nav__mobile-btn">
+                    <button class="nav__mobile-btn nav__mobile-btn--first">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="nav__mobile-svg icon icon-tabler icon-tabler-plus" width="28" height="28"
                             viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none"
@@ -37,19 +61,28 @@
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                         </svg>
                     </button>
-                    <ul class="nav__dropdown-list ">
-                        <li class="nav__mobile-item nav__dropdown-item">
-                            <a href="history.html" class="nav__mobile-link">history</a>
-                            <a href="structure.html" class="nav__mobile-link">structure</a>
-                            <a href="comissions.html" class="nav__mobile-link">committes</a>
-                            <a href="officials.html" class="nav__mobile-link">officials</a>
-                            <a href="antidoping.html" class="nav__mobile-link">anti-doping</a>
-                        </li>
-                    </ul>
                 </li>
+                <ul class="nav__dropdown-list nav__dropdown-list--first ">
+                    <li class="nav__mobile-item nav__dropdown-item">
+                        <a href="history.html" class="nav__mobile-link nav__dropdown-link">history</a>
+                    </li>
+                    <li class="nav__mobile-item nav__dropdown-item">
+                        <a href="structure.html" class="nav__mobile-link nav__dropdown-link">structure</a>
+                    </li>
+
+                    <li class="nav__mobile-item nav__dropdown-item">
+                        <a href="comissions.html" class="nav__mobile-link nav__dropdown-link">committes</a>
+                    </li>
+                    <li class="nav__mobile-item nav__dropdown-item">
+                        <a href="officials.html" class="nav__mobile-link nav__dropdown-link">officials</a>
+                    </li>
+                    <li class="nav__mobile-item nav__dropdown-item">
+                        <a href="antidoping.html" class="nav__mobile-link nav__dropdown-link">anti-doping</a>
+                    </li>
+                </ul>
                 <li class="nav__mobile-item">
                     <a href="#" class="nav__mobile-link">ranking</a>
-                    <button class="nav__mobile-btn">
+                    <button class="nav__mobile-btn nav__mobile-btn--second">
                         <svg xmlns="http://www.w3.org/2000/svg"
                             class="nav__mobile-svg icon icon-tabler icon-tabler-plus" width="28" height="28"
                             viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none"
@@ -59,13 +92,15 @@
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                         </svg>
                     </button>
-                    <ul class="nav__dropdown-list ">
-                        <li class="nav__mobile-item nav__dropdown-item">
-                            <a href="men-ranking.html" class="nav__mobile-link">men</a>
-                            <a href="women-ranking.html" class="nav__mobile-link">women</a>
-                        </li>
-                    </ul>
                 </li>
+                <ul class="nav__dropdown-list nav__dropdown-list--second ">
+                    <li class="nav__mobile-item nav__dropdown-item">
+                        <a href="men-ranking.html" class="nav__mobile-link nav__dropdown-link">men</a>
+                    </li>
+                    <li class="nav__mobile-item nav__dropdown-item">
+                        <a href="women-ranking.html" class="nav__mobile-link nav__dropdown-link">women</a>
+                    </li>
+                </ul>
                 <li class="nav__mobile-item">
                     <a href="calendar.html" class="nav__mobile-link">calendar</a>
                 </li>
