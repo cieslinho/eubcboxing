@@ -43,6 +43,7 @@ body {
 	position: fixed;
 	width: 100%;
 	top: 0;
+	box-shadow: 0 15px 15px -15px var(--navy);
 	background-color: var(--white);
 	&__mobile {
 		display: flex;
@@ -172,6 +173,7 @@ body {
 		display: flex;
 	}
 	&__dropdown-link {
+		background-color: var(--navy);
 		border-bottom: 1px solid var(--darkred);
 	}
 
@@ -193,28 +195,89 @@ body {
 
 //nav desktop
 .nav {
+	&__top {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: transparent;
+		width: 100%;
+		z-index: 5;
+		border-bottom: 2px solid var(--red);
+	}
+	&__socials {
+		display: flex;
+		align-items: center;
+		&-link {
+			padding: 0.5em;
+			margin-right: 1em;
+			&:hover ion-icon {
+				color: var(--darkred);
+			}
+			ion-icon {
+				font-size: 2.2rem;
+				color: var(--red);
+				transition: color 0.3s;
+			}
+		}
+	}
 	&__desktop {
 		display: none;
-		align-items: center;
+		align-items: strech;
 		justify-content: flex-start;
 		&-logo {
 			margin-right: auto;
-			height: 80px;
 		}
 		&-img {
-			height: 90px;
+			padding: 0.5em;
+			height: 60px;
 			width: 250px;
 			object-fit: contain;
 		}
 		&-list {
 			display: flex;
-			align-items: center;
+			justify-content: center;
 			list-style: none;
 		}
 		&-item {
+			margin: 0 0.5em;
+			position: relative;
+			background-color: transparent;
+			&:hover::before {
+				width: 100%;
+			}
+			&::before {
+				position: absolute;
+				content: '';
+				left: 50%;
+				height: 1.8px;
+				bottom: 14px;
+				width: 0;
+				transform: translateX(-50%);
+				background-color: var(--red);
+				transition: width 0.3s;
+			}
+			&:nth-child(1),
+			&:nth-child(2) {
+				&::after {
+					position: absolute;
+					content: url('/dist/icons/caret-down-outline.svg');
+					filter: invert(20%) sepia(73%) saturate(4023%) hue-rotate(350deg) brightness(83%) contrast(108%);
+					height: 15px;
+					width: 15px;
+					right: 50%;
+					transform: translateX(50%);
+					bottom: 5px;
+				}
+			}
 		}
 		&-link {
-			margin: 0.5em;
+			display: block;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			color: var(--blue);
+			text-transform: uppercase;
+			line-height: 64px;
 		}
 	}
 }
@@ -223,6 +286,7 @@ body {
 
 @media (min-width: 992px) {
 	.nav {
+		top: 44px;
 		&__mobile {
 			display: none;
 		}
