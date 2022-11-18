@@ -260,7 +260,7 @@ body {
 			&:nth-child(2) {
 				&::after {
 					position: absolute;
-					content: url('/dist/icons/caret-down-outline.svg');
+					content: url(../icons/caret-down-outline.svg);
 					filter: invert(20%) sepia(73%) saturate(4023%) hue-rotate(350deg) brightness(83%) contrast(108%);
 					height: 15px;
 					width: 15px;
