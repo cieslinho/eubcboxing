@@ -5,6 +5,19 @@ const dropdownMenuFirst = document.querySelector('.nav__dropdown-list--first')
 const dropdownMenuSecond = document.querySelector('.nav__dropdown-list--second')
 const dropdownBtnFirst = document.querySelector('.nav__mobile-btn--first')
 const dropdownBtnSecond = document.querySelector('.nav__mobile-btn--second')
+const sliderBox = document.querySelector('.header__box')
+const slidesImg = sliderBox.getElementsByTagName('img')
+let i = 0
+function nextSlide() {
+	slidesImg[i].classList.remove('header__img-active')
+	i = (i + 1) % slidesImg.length
+	slidesImg[i].classList.add('header__img-active')
+}
+function previousSlide() {
+	slidesImg[i].classList.remove('header__img-active')
+	i = (i - 1 + slidesImg.length) % slidesImg.length
+	slidesImg[i].classList.add('header__img-active')
+}
 
 const handleNav = () => {
 	mobileNav.classList.toggle('show-menu')
