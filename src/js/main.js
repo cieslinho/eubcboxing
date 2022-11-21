@@ -5,9 +5,16 @@ const dropdownMenuFirst = document.querySelector('.nav__dropdown-list--first')
 const dropdownMenuSecond = document.querySelector('.nav__dropdown-list--second')
 const dropdownBtnFirst = document.querySelector('.nav__mobile-btn--first')
 const dropdownBtnSecond = document.querySelector('.nav__mobile-btn--second')
+const getFlagEmoji = countryCode =>
+	countryCode.toUpperCase().replace(/./g, char => String.fromCodePoint(127397 + char.charCodeAt()))
+
+const flagReplace = document.querySelectorAll('[data-flag]')
+flagReplace.forEach(s => (s.innerHTML = getFlagEmoji(s.dataset.flag)))
 const sliderBox = document.querySelector('.header__box')
 const slidesImg = sliderBox.getElementsByTagName('img')
 let i = 0
+const accordion = document.querySelector('.about__accordion-body')
+const accordionBtn = document.querySelector('.about__btn')
 function nextSlide() {
 	slidesImg[i].classList.remove('header__img-active')
 	i = (i + 1) % slidesImg.length
@@ -35,6 +42,9 @@ const handleNav = () => {
 		})
 	})
 }
+const showAccordion = () => {
+	accordion.classList.toggle('active-accordion')
+}
 
 navBtn.addEventListener('click', handleNav)
 dropdownBtnFirst.addEventListener('click', () => {
@@ -43,3 +53,4 @@ dropdownBtnFirst.addEventListener('click', () => {
 dropdownBtnSecond.addEventListener('click', () => {
 	dropdownMenuSecond.classList.toggle('show-dropdown')
 })
+accordionBtn.addEventListener('click', showAccordion)
