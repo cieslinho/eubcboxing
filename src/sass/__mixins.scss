@@ -1,0 +1,11 @@
+@mixin btn {
+	padding: 0.25em 1em;
+	text-transform: uppercase;
+	background-color: var(--white);
+	color: var(--blue);
+	transition: color 0.3s;
+	border: none;
+	&:hover {
+		color: var(--darkred);
+	}
+}
