@@ -15,6 +15,7 @@ const slidesImg = sliderBox.getElementsByTagName('img')
 let i = 0
 const accordion = document.querySelector('.about__accordion-body')
 const accordionBtn = document.querySelector('.about__btn')
+
 function nextSlide() {
 	slidesImg[i].classList.remove('header__img-active')
 	i = (i + 1) % slidesImg.length

@@ -67,7 +67,7 @@
                     </ul>
                 </li>
                 <li class="nav__desktop-item">
-                    <a href="calendar.html" class="nav__desktop-link">calendar</a>
+                    <a href="#events" class="nav__desktop-link">calendar</a>
                 </li>
                 <li class="nav__desktop-item">
                     <a href="video.html" class="nav__desktop-link">video</a>
@@ -137,7 +137,7 @@
                     </li>
                 </ul>
                 <li class="nav__mobile-item">
-                    <a href="calendar.html" class="nav__mobile-link">calendar</a>
+                    <a href="#events" class="nav__mobile-link">calendar</a>
                 </li>
                 <li class="nav__mobile-item">
                     <a href="video.html" class="nav__mobile-link">video</a>
@@ -346,7 +346,10 @@
         </section>
         <section id="events" class="section-padding events">
             <div class="container">
-                <h2 class="section-title section-title--first">events</h2>
+                <div class="section-titlebox">
+                    <h2 class="section-title section-title--first">events</h2>
+                    <span class="section-underline"></span>
+                </div>
                 <h3 class="section-subtitle section-subtitle--first">upcoming</h3>
                 <div class="events__boxes events__boxes-calendar">
                     <div class="events__box">
@@ -460,6 +463,56 @@
                 </div>
             </div>
         </section>
+        <section class="section-padding newsletter">
+            <div class="container">
+                <h2 class="section-title section-title--second">newsletter</h2>
+                <h3 class="section-subtitle section-subtitle--second">newsletter</h3>
+                <div class="newsletter__boxes">
+                    <div class="newsletter__box">
+                        <p class="newsletter__title">sign up for newsletters</p>
+                        <div class="newsletter__bottom">
+                            <input type="email" name="" id="" class="newsletter__input"
+                                placeholder="Enter your email address">
+                            <button class="newsletter__btn">subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section section-padding socials">
+            <div class="container">
+                <div class="section-titlebox">
+                    <h2 class="section-title section-title--first">social channels</h2>
+                    <h3 class="section-subtitle section-subtitle--first">socials</h3>
+                    <span class="section-underline"></span>
+                </div>
+                <div class="socials__boxes">
+                    <div class="socials__box socials__box--youtube">
+                        <div class="socials__top">
+                            <ion-icon name="logo-youtube" class="socials__ion socials__ion--youtube"></ion-icon>
+                            <p class="socials__title">YouTube</p>
+                        </div>
+                        <div class="socials__bottom ">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/zmCerDXyn7s"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="socials__box socials__box--instagram">
+                        <div class="socials__top">
+                            <ion-icon name="logo-instagram" class="socials__ion socials__ion--instagram"></ion-icon>
+                            <p class="socials__title">Instagram</p>
+                        </div>
+                        <div class="socials__bottom">
+                            <iframe src="//instagram.com/reel/CQN7RSBqOKm/embed/" width="560" height="315"
+                                frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
