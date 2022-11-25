@@ -377,6 +377,7 @@ body {
 		left: 0;
 		width: 100%;
 		height: 100%;
+		margin-top: 69px;
 		object-fit: cover;
 		opacity: 0;
 		transition: opacity 0.5s;
@@ -1130,6 +1131,11 @@ body {
 		}
 		&__desktop {
 			display: flex;
+		}
+	}
+	.header {
+		&__img {
+			margin-top: 109px;
 		}
 	}
 	.about {
