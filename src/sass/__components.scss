@@ -17,7 +17,10 @@
 	width: 100%;
 	max-width: 1600px;
 }
-
+.section-titlebox {
+	display: flex;
+	justify-content: flex-end;
+}
 .section-title {
 	margin-bottom: 0.8em;
 	letter-spacing: 0.3px;
@@ -75,6 +78,72 @@
 	}
 }
 
+.card {
+	&--navy {
+		background-color: var(--navy);
+	}
+	&--white {
+		background-color: var(--white);
+	}
+}
+.card-title {
+	&--lightblack {
+		color: var(--lightblack);
+	}
+	&--white {
+		color: var(--white);
+	}
+}
+.card-description {
+	&--lightblack {
+		color: var(--lightblack);
+	}
+	&--white {
+		color: var(--white);
+	}
+}
+.card-btn {
+	&--navy {
+		color: var(--white);
+		background-color: var(--navy);
+		&:hover {
+			color: var(--white);
+			background-color: var(--red);
+		}
+	}
+	&--white {
+		color: var(--navy);
+		background-color: var(--white);
+		&:hover {
+			color: var(--white);
+			background-color: var(--red);
+		}
+	}
+}
+.socials__box-icon--instagram-white {
+	color: var(--white);
+}
+
+.titlebox {
+	display: flex;
+	&--left {
+		justify-content: flex-start;
+	}
+	&--right {
+		justify-content: flex-end;
+	}
+}
+.navy-section {
+	background-color: var(--navy);
+}
+
+.white-section {
+	background-color: var(--white);
+}
+
+.socials-white {
+	background-color: var(--white);
+}
 @media (min-width: 576px) {
 	.main {
 		.container {

@@ -2,11 +2,6 @@
 	padding: 0.25em 1em;
 	font-family: 'Roboto Condensed', sans-serif;
 	text-transform: uppercase;
-	background-color: var(--white);
-	color: var(--blue);
 	transition: color 0.3s;
 	border: none;
-	&:hover {
-		color: var(--darkred);
-	}
 }

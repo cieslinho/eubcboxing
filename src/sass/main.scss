@@ -361,6 +361,7 @@ body {
 }
 // header
 .header {
+	margin-top: 69px;
 	position: relative;
 	width: 100%;
 	min-height: 100vh;
@@ -377,7 +378,6 @@ body {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		margin-top: 69px;
 		object-fit: cover;
 		opacity: 0;
 		transition: opacity 0.5s;
@@ -452,6 +452,11 @@ body {
 	}
 	&__link {
 		@include btn;
+		background-color: var(--white);
+		color: var(--blue);
+		&:hover {
+			color: var(--darkred);
+		}
 	}
 }
 // about
@@ -664,10 +669,7 @@ body {
 			bottom: 0;
 		}
 	}
-	.section-titlebox {
-		display: flex;
-		justify-content: flex-end;
-	}
+
 	&__boxes {
 		display: flex;
 		flex-direction: column;
@@ -819,10 +821,7 @@ body {
 			bottom: 0;
 		}
 	}
-	.section-titlebox {
-		display: flex;
-		justify-content: flex-end;
-	}
+
 	&__textbox {
 		display: flex;
 		align-items: center;
@@ -841,7 +840,6 @@ body {
 		text-align: center;
 		justify-content: center;
 		min-height: 280px;
-		background-color: var(--white);
 		transition: transform 0.3s, box-shadow 0.3s;
 		&:hover {
 			transform: scale(1.05);
@@ -870,7 +868,6 @@ body {
 			}
 		}
 		&-title {
-			color: var(--lightblack);
 			font-size: 2.3rem;
 		}
 		&-middle {
@@ -878,24 +875,82 @@ body {
 			margin-bottom: 0.8em;
 		}
 		&-description {
-			color: var(--lightblack);
 			font-size: 1.6rem;
 		}
 		&-btn {
 			@include btn;
 			padding: 0.6em;
-			color: var(--white);
 			font-size: 1.6rem;
-			background-color: var(--navy);
 			width: 100%;
 			transition: color 0.3s, background-color 0.3s;
-			&:hover {
-				color: var(--white);
-				background-color: var(--red);
-			}
 		}
 	}
 }
+//structure
+.structure,
+.commissions {
+	position: relative;
+	.section-title {
+		border-bottom: 2px solid var(--darkred);
+	}
+	&__title {
+		font-size: 2.2rem;
+		display: flex;
+		margin-bottom: 1em;
+		justify-content: center;
+		color: var(--white);
+	}
+	&__boxes {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		&--img {
+			margin-bottom: 1em;
+			align-items: center;
+			width: 100%;
+		}
+		&-text {
+			color: var(--white);
+			font-size: 1.9rem;
+			order: 1;
+		}
+		&-table {
+			padding: 1em;
+			width: 100%;
+			background-color: var(--white);
+		}
+		&-tr {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+		&-th {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0.15em;
+			padding: 0.4em 0.1em;
+			width: 33.3%;
+			color: var(--navy);
+			background-color: var(--gray);
+			font-size: 1.3rem;
+			border-radius: 3px;
+			&--fr {
+				background-color: var(--blue);
+				color: var(--gray);
+			}
+		}
+	}
+	&__img {
+		margin-bottom: 1em;
+		width: 100%;
+	}
+}
+
 //footer
 .footer {
 	background-color: var(--black);
@@ -991,6 +1046,7 @@ body {
 		}
 	}
 }
+
 // media
 @media (min-width: 576px) {
 	.header {
@@ -1038,6 +1094,15 @@ body {
 			}
 		}
 	}
+	.structure,
+	.commissions {
+		&__box {
+			&-th {
+				padding: 0.6em 0.4em;
+				font-size: 1.5rem;
+			}
+		}
+	}
 	.socials {
 		&__box {
 			&-icon {
@@ -1075,7 +1140,6 @@ body {
 	.newsletter {
 		&__bottom {
 			display: flex;
-			// flex-direction: row;
 		}
 		&__title {
 			font-size: 2.3rem;
@@ -1134,9 +1198,7 @@ body {
 		}
 	}
 	.header {
-		&__img {
-			margin-top: 109px;
-		}
+		margin-top: 109px;
 	}
 	.about {
 		&__boxes {
@@ -1168,6 +1230,40 @@ body {
 		.active-accordion .about__accordion-table {
 			opacity: 0;
 			visibility: hidden;
+		}
+	}
+	.structure,
+	.commissions {
+		&__boxes {
+			flex-direction: row;
+		}
+		&__title {
+			font-size: 2.5rem;
+			justify-content: flex-start;
+		}
+		&__box {
+			&--img {
+				margin-right: 2em;
+				width: 50%;
+			}
+			&--table {
+				width: 50%;
+			}
+			&-text {
+				font-size: 2.2rem;
+				align-self: flex-start;
+			}
+			&-th {
+				padding: 0.5em 0.4em;
+				font-size: 1.4rem;
+			}
+		}
+	}
+	.commissions {
+		&__box {
+			&--table {
+				width: 80%;
+			}
 		}
 	}
 	.socials {
@@ -1241,6 +1337,41 @@ body {
 	.newsletter {
 		.section-subtitle {
 			top: 5%;
+		}
+	}
+	.structure,
+	.commissions {
+		&__title {
+			font-size: 3.5rem;
+		}
+		&__box {
+			&--img {
+				margin-right: 2em;
+				width: 60%;
+			}
+			&--table {
+				width: 40%;
+			}
+			&-text {
+				font-size: 2.5rem;
+			}
+		}
+	}
+	.commissions {
+		&:nth-child(2) {
+			.section-subtitle {
+				top: 3%;
+			}
+		}
+		&:nth-child(6) {
+			.section-subtitle {
+				top: 10%;
+			}
+		}
+		&__box {
+			&--table {
+				width: 100%;
+			}
 		}
 	}
 }
