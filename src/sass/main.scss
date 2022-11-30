@@ -888,7 +888,8 @@ body {
 }
 //structure
 .structure,
-.commissions {
+.commissions,
+.officials {
 	position: relative;
 	.section-title {
 		border-bottom: 2px solid var(--darkred);
@@ -1095,7 +1096,8 @@ body {
 		}
 	}
 	.structure,
-	.commissions {
+	.commissions,
+	.officials {
 		&__box {
 			&-th {
 				padding: 0.6em 0.4em;
@@ -1233,7 +1235,8 @@ body {
 		}
 	}
 	.structure,
-	.commissions {
+	.commissions,
+	.officials {
 		&__boxes {
 			flex-direction: row;
 		}
@@ -1259,7 +1262,8 @@ body {
 			}
 		}
 	}
-	.commissions {
+	.commissions,
+	.officials {
 		&__box {
 			&--table {
 				width: 80%;
@@ -1340,7 +1344,8 @@ body {
 		}
 	}
 	.structure,
-	.commissions {
+	.commissions,
+	.officials {
 		&__title {
 			font-size: 3.5rem;
 		}
@@ -1368,6 +1373,13 @@ body {
 				top: 10%;
 			}
 		}
+		&__box {
+			&--table {
+				width: 100%;
+			}
+		}
+	}
+	.officials {
 		&__box {
 			&--table {
 				width: 100%;
