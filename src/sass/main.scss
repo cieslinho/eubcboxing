@@ -821,7 +821,6 @@ body {
 			bottom: 0;
 		}
 	}
-
 	&__textbox {
 		display: flex;
 		align-items: center;
@@ -886,7 +885,7 @@ body {
 		}
 	}
 }
-//structure
+//structure,commissions,officials
 .structure,
 .commissions,
 .officials {
@@ -951,7 +950,54 @@ body {
 		width: 100%;
 	}
 }
-
+//anti-doping
+.anti-doping {
+	position: relative;
+	.section-title {
+		border-bottom: 2px solid var(--darkred);
+	}
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__box {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1em;
+		margin: 1em;
+		background-color: var(--white);
+		max-width: 400px;
+		width: 100%;
+		transition: transform 0.3s, box-shadow 0.3s;
+		&:hover {
+			transform: scale(1.05);
+			box-shadow: 0px 3px 15px var(--blue);
+		}
+	}
+	&__img {
+		width: 100%;
+	}
+	&__btn {
+		@include btn;
+		margin: 1em;
+		padding: 0.5em;
+		color: var(--white);
+		background-color: var(--navy);
+		width: 100%;
+		transition: background-color 0.3s;
+		&:hover {
+			background-color: var(--red);
+		}
+	}
+}
+//ranking
+.ranking {
+	position: relative;
+}
 //footer
 .footer {
 	background-color: var(--black);
@@ -1155,6 +1201,24 @@ body {
 		}
 		&__btn {
 			width: 30%;
+		}
+	}
+	.anti-doping {
+		&__boxes {
+			flex-direction: row;
+		}
+		&__box {
+			min-height: 350px;
+			max-height: 450px;
+			max-width: 350px;
+		}
+		&__img {
+			height: 300px;
+			width: 100%;
+			object-fit: contain;
+		}
+		&__btn {
+			padding: 1em;
 		}
 	}
 	.footer {
