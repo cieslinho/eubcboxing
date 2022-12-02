@@ -15,7 +15,21 @@ const slidesImg = sliderBox.getElementsByTagName('img')
 let i = 0
 const accordion = document.querySelector('.about__accordion-body')
 const accordionBtn = document.querySelector('.about__btn')
-
+const rankingAccordion = document.querySelector('.ranking__accordion')
+const rankingAccordionBtns = document.querySelectorAll('.ranking__accordion-btn')
+function openRankingAccordion() {
+	if (this.nextElementSibling.classList.contains('active-ranking')) {
+		this.nextElementSibling.classList.remove('active-ranking')
+	} else {
+		closeRankingAccordionItems()
+		this.nextElementSibling.classList.toggle('active-ranking')
+	}
+}
+rankingAccordionBtns.forEach(btn => btn.addEventListener('click', openRankingAccordion))
+const closeRankingAccordionItems = () => {
+	const allActiveItems = document.querySelectorAll('.ranking__accordion-table')
+	allActiveItems.forEach(item => item.classList.remove('active-ranking'))
+}
 function nextSlide() {
 	slidesImg[i].classList.remove('header__img-active')
 	i = (i + 1) % slidesImg.length
