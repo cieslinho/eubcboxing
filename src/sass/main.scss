@@ -1097,6 +1097,11 @@ body {
 			left: 10px;
 		}
 	}
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+	}
 	&__box {
 		margin-bottom: 1em;
 		display: flex;
@@ -1110,6 +1115,7 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		width: 15%;
 		justify-content: center;
 		background-color: var(--red);
 	}
@@ -1127,6 +1133,7 @@ body {
 		padding: 0.5em;
 		display: flex;
 		flex-direction: column;
+		width: 85%;
 		color: var(--black);
 	}
 	&__dates,
@@ -1134,6 +1141,116 @@ body {
 	&__place {
 		margin-bottom: 0.3em;
 		font-weight: 700;
+	}
+	&__dates {
+		font-size: 1.3rem;
+	}
+	&__event,
+	&__description,
+	&__place {
+		font-size: 1.4rem;
+	}
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__btn {
+		margin: 2em auto;
+		display: flex;
+		align-items: center;
+		@include btn;
+		font-size: 1.5rem;
+		background-color: transparent;
+		color: var(--white);
+		&-icon {
+			font-size: 2rem;
+			margin: 0 0.5em;
+		}
+	}
+}
+//article
+.article {
+	position: relative;
+	.section-title {
+		border-bottom: 2px solid var(--darkred);
+	}
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	&__title {
+		text-align: center;
+		margin-bottom: 0.5em;
+		font-size: 2.2rem;
+		color: var(--white);
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&-intro {
+			margin-bottom: 1em;
+		}
+	}
+	&__img {
+		max-width: 800px;
+		width: 100%;
+	}
+	&__info {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	&__category {
+		margin-bottom: 1em;
+		display: flex;
+		align-items: center;
+	}
+	&__date {
+		margin-right: 1em;
+		color: var(--white);
+	}
+	&__btn {
+		@include btn;
+		background-color: var(--red);
+		color: var(--white);
+	}
+	&__text {
+		line-height: 150%;
+		margin-bottom: 1em;
+		color: var(--gray);
+	}
+	&__media {
+		max-width: 400px;
+		&-img {
+			margin-bottom: 0.5em;
+			width: 100%;
+		}
+	}
+}
+//allnews
+.allnews {
+	position: relative;
+	.section-title {
+		border-bottom: 2px solid var(--darkred);
+	}
+	.news__btn {
+		&:hover {
+			background-color: var(--white);
+			color: var(--navy);
+		}
+	}
+}
+//contact
+.contact {
+	position: relative;
+	.section-title {
+		border-bottom: 2px solid var(--darkred);
 	}
 }
 //footer
@@ -1359,6 +1476,47 @@ body {
 			padding: 1em;
 		}
 	}
+
+	.article {
+		&__title {
+			font-size: 2.6rem;
+		}
+		&__date {
+			font-size: 2rem;
+		}
+		&__btn {
+			font-size: 1.4rem;
+		}
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+
+	.calendar {
+		&__date {
+			width: 10%;
+		}
+		&__info {
+			width: 90%;
+		}
+		&__dates {
+			font-size: 1.5rem;
+		}
+		&__month {
+			font-size: 2rem;
+		}
+		&__event,
+		&__description,
+		&__place {
+			font-size: 1.6rem;
+		}
+		&__btn {
+			font-size: 1.8rem;
+			&-icon {
+				font-size: 2.5rem;
+			}
+		}
+	}
 	.footer {
 		&__logo {
 			height: 60px;
@@ -1480,6 +1638,51 @@ body {
 		&__box {
 			max-width: 260px;
 			margin: 0.5em;
+		}
+	}
+	.article {
+		&__info {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		&__title {
+			font-size: 3.5rem;
+			text-align: left;
+		}
+		&__btn {
+			font-size: 1.6rem;
+		}
+		&__text {
+			font-size: 2rem;
+		}
+		&__boxes {
+			align-items: flex-start;
+			flex-direction: row;
+		}
+		&__box {
+			&-intro,
+			&-content {
+				width: 50%;
+			}
+			&-intro {
+				margin-right: 1.5em;
+			}
+			&-content {
+				align-items: flex-end;
+			}
+		}
+		&__media {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	.calendar {
+		&__date {
+			width: 5%;
+		}
+		&__info {
+			width: 95%;
 		}
 	}
 	.footer {
