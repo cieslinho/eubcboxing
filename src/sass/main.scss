@@ -464,6 +464,9 @@ body {
 .about {
 	position: relative;
 	background-color: var(--navy);
+	.section-title {
+		border-bottom: 2px solid var(--darkred);
+	}
 	&__text {
 		margin-bottom: 0.5em;
 		line-height: 150%;
@@ -526,11 +529,11 @@ body {
 	&__accordion {
 		&-table {
 			padding: 1em;
-			opacity: 0;
+			opacity: 1;
 			background-color: var(--white);
 			margin: 0 auto;
 			transition: opacity 0.3s;
-			visibility: hidden;
+			visibility: visible;
 			width: 100%;
 		}
 		&-tr {
@@ -556,8 +559,8 @@ body {
 		}
 	}
 	.active-accordion .about__accordion-table {
-		opacity: 1;
-		visibility: visible;
+		opacity: 0;
+		visibility: hidden;
 	}
 }
 
@@ -1345,6 +1348,80 @@ body {
 		}
 	}
 }
+//documents
+.documents {
+	position: relative;
+	.section-title {
+		border-bottom: 2px solid var(--darkred);
+	}
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+	&__box {
+		margin-bottom: 1.5em;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		background-color: var(--blue);
+		&-top {
+			display: flex;
+			flex-direction: column;
+			padding: 1em;
+		}
+	}
+	&__content {
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		background-color: var(--white);
+		border-bottom: 2px solid var(--darkred);
+	}
+	&__heading {
+		margin-bottom: 0.3em;
+		font-size: 2rem;
+		font-weight: 700;
+		color: var(--white);
+	}
+	&__date {
+		padding: 0.3em;
+		align-self: flex-start;
+		background-color: var(--red);
+		color: var(--gray);
+	}
+	&__link {
+		position: relative;
+		padding: 0.3em;
+		margin-bottom: 1.5em;
+		color: var(--navy);
+		background-color: var(--gray);
+		transition: color 0.3s, background-color 0.3s;
+		&:hover {
+			background-color: var(--navy);
+			color: var(--white);
+		}
+		&:hover::after {
+			width: 100%;
+			background-color: var(--darkred);
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			left: 0;
+			bottom: -5px;
+			width: 20px;
+			height: 2px;
+			background-color: var(--blue);
+			transition: width 0.8s, background-color 0.3s;
+		}
+		&:last-child {
+			margin-bottom: 0.5em;
+		}
+	}
+}
 //contact
 .contact {
 	position: relative;
@@ -1413,7 +1490,7 @@ body {
 			height: 2px;
 			background-color: var(--blue);
 			transform-origin: right;
-			transition: width 0.5s, background-color 0.3s;
+			transition: width 0.8s, background-color 0.3s;
 		}
 	}
 	&__icon {
@@ -1766,6 +1843,17 @@ body {
 			font-size: 1.6rem;
 		}
 	}
+	.documents {
+		&__heading {
+			font-size: 2.4rem;
+		}
+		&__date {
+			font-size: 1.8rem;
+		}
+		&__link {
+			font-size: 1.8rem;
+		}
+	}
 	.footer {
 		&__logo {
 			height: 60px;
@@ -1831,16 +1919,6 @@ body {
 		&__title,
 		&__btn {
 			font-size: 2.2rem;
-		}
-		&__accordion {
-			&-table {
-				opacity: 1;
-				visibility: visible;
-			}
-		}
-		.active-accordion .about__accordion-table {
-			opacity: 0;
-			visibility: hidden;
 		}
 	}
 	.structure,
@@ -1943,6 +2021,23 @@ body {
 		}
 		&__info {
 			width: 95%;
+		}
+	}
+	.documents {
+		&__box {
+			&-top {
+				flex-direction: row;
+				justify-content: space-between;
+			}
+		}
+		&__heading {
+			font-size: 2.8rem;
+		}
+		&__date {
+			font-size: 2rem;
+		}
+		&__link {
+			font-size: 2rem;
 		}
 	}
 	.contact {
